@@ -2069,8 +2069,9 @@ function App() {
                 objectFit: "contain",
                 position: "absolute",
                 top: "66px",
-                objectPosition: "36px",
-                zIndex: "100"
+                objectPosition: "124px",
+                zIndex: "100",
+                left: "0"
               },
               src: "img/rakutenlist/asics/male/508759/blue/chitosesports_10043147navy.png",
               alt: ""
@@ -2112,7 +2113,8 @@ function App() {
                 objectFit: "contain",
                 position: "absolute",
                 top: "190px",
-                objectPosition: "10px"
+                objectPosition: "100px",
+                left: "0"
               },
               src: "/img/rakutenlist/asics/male/508772/white/sportsman_11351615.png",
               alt: ""
@@ -2154,7 +2156,8 @@ function App() {
                 objectFit: "contain",
                 position: "absolute",
                 top: "320px",
-                objectPosition: "50px"
+                objectPosition: "140px",
+                left: "0"
               },
               src: "/img/rakutenlist/adidas/male/208025/yellow/mathy-mathy_10198030.png",
               alt: ""
