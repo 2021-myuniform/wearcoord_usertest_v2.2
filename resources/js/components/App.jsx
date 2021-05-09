@@ -169,6 +169,7 @@ function App() {
 
                 </div>
             </div>
+            <br />
             <button onClick={onClickFetchCaps}>Caps</button>
             <br />
             <button onClick={onClickFetchTops}>Tops</button>
