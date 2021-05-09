@@ -1911,8 +1911,8 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
-/* harmony import */ var swiper_react__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! swiper/react */ "./node_modules/swiper/esm/react/swiper.js");
-/* harmony import */ var swiper_react__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! swiper/react */ "./node_modules/swiper/esm/react/swiper-slide.js");
+/* harmony import */ var swiper_react__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! swiper/react */ "./node_modules/swiper/esm/react/swiper.js");
+/* harmony import */ var swiper_react__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! swiper/react */ "./node_modules/swiper/esm/react/swiper-slide.js");
 /* harmony import */ var swiper_swiper_bundle_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! swiper/swiper-bundle.css */ "./node_modules/swiper/swiper-bundle.css");
 /* harmony import */ var _check_components_UserCard__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./check/components/UserCard */ "./resources/js/components/check/components/UserCard.jsx");
 /* harmony import */ var _check_components_PostCard__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./check/components/PostCard */ "./resources/js/components/check/components/PostCard.jsx");
@@ -1921,7 +1921,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _check_components_SetBtn__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./check/components/SetBtn */ "./resources/js/components/check/components/SetBtn.jsx");
 /* harmony import */ var _check_hooks_useAllCaps__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./check/hooks/useAllCaps */ "./resources/js/components/check/hooks/useAllCaps.jsx");
 /* harmony import */ var _check_hooks_useAllTops__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./check/hooks/useAllTops */ "./resources/js/components/check/hooks/useAllTops.jsx");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var _check_hooks_useAllPants__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./check/hooks/useAllPants */ "./resources/js/components/check/hooks/useAllPants.jsx");
+/* harmony import */ var _check_hooks_useAllShoes__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./check/hooks/useAllShoes */ "./resources/js/components/check/hooks/useAllShoes.jsx");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
+
 
 
 
@@ -1951,6 +1955,18 @@ function App() {
       loadingTops = _useAllTops.loadingTops,
       errorTops = _useAllTops.errorTops;
 
+  var _useAllPants = (0,_check_hooks_useAllPants__WEBPACK_IMPORTED_MODULE_10__.useAllPants)(),
+      getPants = _useAllPants.getPants,
+      userPants = _useAllPants.userPants,
+      loadingPants = _useAllPants.loadingPants,
+      errorPants = _useAllPants.errorPants;
+
+  var _useAllShoes = (0,_check_hooks_useAllShoes__WEBPACK_IMPORTED_MODULE_11__.useAllShoes)(),
+      getShoes = _useAllShoes.getShoes,
+      userShoes = _useAllShoes.userShoes,
+      loadingShoes = _useAllShoes.loadingShoes,
+      errorShoes = _useAllShoes.errorShoes;
+
   var onClickFetchCaps = function onClickFetchCaps() {
     return getCaps();
   };
@@ -1959,33 +1975,41 @@ function App() {
     return getTops();
   };
 
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.Fragment, {
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("div", {
+  var onClickFetchPants = function onClickFetchPants() {
+    return getPants();
+  };
+
+  var onClickFetchShoes = function onClickFetchShoes() {
+    return getShoes();
+  };
+
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.Fragment, {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)("div", {
       className: "centerContainer",
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsxs)("div", {
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsxs)("div", {
         className: "mannequinImg",
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("div", {
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)("div", {
           style: {
             display: "flex",
             overflowX: "scroll"
           },
-          children: userCaps.length ? error ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("p", {
+          children: userCaps.length ? error ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)("p", {
             style: {
               color: "red"
             },
             children: "\u30C7\u30FC\u30BF\u306E\u53D6\u5F97\u306B\u5931\u6557\u3057\u307E\u3057\u305F"
-          }) : loading ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("p", {
+          }) : loading ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)("p", {
             children: "Loading..."
-          }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.Fragment, {
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(swiper_react__WEBPACK_IMPORTED_MODULE_11__.Swiper, {
+          }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.Fragment, {
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)(swiper_react__WEBPACK_IMPORTED_MODULE_13__.Swiper, {
               id: "controller",
               slidesPerView: 3,
               centeredSlides: true // onSlideChange={(e) => console.log(e)}
               ,
               children: userCaps.map(function (wear) {
-                return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(swiper_react__WEBPACK_IMPORTED_MODULE_12__.SwiperSlide, {
+                return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)(swiper_react__WEBPACK_IMPORTED_MODULE_14__.SwiperSlide, {
                   className: "wearLi",
-                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("img", {
+                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)("img", {
                     className: "wearImg",
                     src: wear.url,
                     alt: ""
@@ -1993,12 +2017,12 @@ function App() {
                 }, wear.id);
               })
             })
-          }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("div", {
+          }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)("div", {
             style: {
               textAlign: "center",
               margin: "auto"
             },
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("img", {
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)("img", {
               style: {
                 width: "28%",
                 height: "50px",
@@ -2009,27 +2033,27 @@ function App() {
               alt: ""
             })
           })
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("div", {
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)("div", {
           style: {
             display: "flex",
             overflowX: "scroll"
           },
-          children: userTops.length ? error ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("p", {
+          children: userTops.length ? error ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)("p", {
             style: {
               color: "red"
             },
             children: "\u30C7\u30FC\u30BF\u306E\u53D6\u5F97\u306B\u5931\u6557\u3057\u307E\u3057\u305F"
-          }) : loadingTops ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("p", {
+          }) : loadingTops ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)("p", {
             children: "Loading..."
-          }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.Fragment, {
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(swiper_react__WEBPACK_IMPORTED_MODULE_11__.Swiper, {
+          }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.Fragment, {
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)(swiper_react__WEBPACK_IMPORTED_MODULE_13__.Swiper, {
               id: "controller2",
               slidesPerView: 3,
               centeredSlides: true,
               children: userTops.map(function (wear) {
-                return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(swiper_react__WEBPACK_IMPORTED_MODULE_12__.SwiperSlide, {
+                return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)(swiper_react__WEBPACK_IMPORTED_MODULE_14__.SwiperSlide, {
                   className: "wearLi",
-                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("img", {
+                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)("img", {
                     className: "wearImg",
                     src: wear.url,
                     alt: ""
@@ -2037,41 +2061,42 @@ function App() {
                 }, wear.id);
               })
             })
-          }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("div", {
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("img", {
+          }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)("div", {
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)("img", {
               style: {
                 width: "100%",
                 height: "130px",
                 objectFit: "contain",
                 position: "absolute",
                 top: "66px",
-                objectPosition: "36px"
+                objectPosition: "36px",
+                zIndex: "100"
               },
               src: "img/rakutenlist/asics/male/508759/blue/chitosesports_10043147navy.png",
               alt: ""
             })
           })
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("div", {
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)("div", {
           style: {
             display: "flex",
             overflowX: "scroll"
           },
-          children: userTops.length ? error ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("p", {
+          children: userPants.length ? error ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)("p", {
             style: {
               color: "red"
             },
             children: "\u30C7\u30FC\u30BF\u306E\u53D6\u5F97\u306B\u5931\u6557\u3057\u307E\u3057\u305F"
-          }) : loadingTops ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("p", {
+          }) : loadingPants ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)("p", {
             children: "Loading..."
-          }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.Fragment, {
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(swiper_react__WEBPACK_IMPORTED_MODULE_11__.Swiper, {
+          }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.Fragment, {
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)(swiper_react__WEBPACK_IMPORTED_MODULE_13__.Swiper, {
               id: "controller3",
               slidesPerView: 3,
               centeredSlides: true,
-              children: userTops.map(function (wear) {
-                return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(swiper_react__WEBPACK_IMPORTED_MODULE_12__.SwiperSlide, {
+              children: userPants.map(function (wear) {
+                return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)(swiper_react__WEBPACK_IMPORTED_MODULE_14__.SwiperSlide, {
                   className: "wearLi",
-                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("img", {
+                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)("img", {
                     className: "wearImg",
                     src: wear.url,
                     alt: ""
@@ -2079,34 +2104,82 @@ function App() {
                 }, wear.id);
               })
             })
-          }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("div", {
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("img", {
+          }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)("div", {
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)("img", {
               style: {
                 width: "100%",
-                height: "130px",
+                height: "180px",
                 objectFit: "contain",
                 position: "absolute",
-                top: "66px",
-                objectPosition: "36px"
+                top: "190px",
+                objectPosition: "10px"
               },
-              src: "img/rakutenlist/asics/male/508759/blue/chitosesports_10043147navy.png",
+              src: "/img/rakutenlist/asics/male/508772/white/sportsman_11351615.png",
+              alt: ""
+            })
+          })
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)("div", {
+          style: {
+            display: "flex",
+            overflowX: "scroll"
+          },
+          children: userShoes.length ? error ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)("p", {
+            style: {
+              color: "red"
+            },
+            children: "\u30C7\u30FC\u30BF\u306E\u53D6\u5F97\u306B\u5931\u6557\u3057\u307E\u3057\u305F"
+          }) : loadingShoes ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)("p", {
+            children: "Loading..."
+          }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.Fragment, {
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)(swiper_react__WEBPACK_IMPORTED_MODULE_13__.Swiper, {
+              id: "controller4",
+              slidesPerView: 3,
+              centeredSlides: true,
+              children: userShoes.map(function (wear) {
+                return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)(swiper_react__WEBPACK_IMPORTED_MODULE_14__.SwiperSlide, {
+                  className: "wearLi",
+                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)("img", {
+                    className: "wearImg",
+                    src: wear.url,
+                    alt: ""
+                  })
+                }, wear.id);
+              })
+            })
+          }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)("div", {
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)("img", {
+              style: {
+                width: "100%",
+                height: "100px",
+                objectFit: "contain",
+                position: "absolute",
+                top: "320px",
+                objectPosition: "50px"
+              },
+              src: "/img/rakutenlist/adidas/male/208025/yellow/mathy-mathy_10198030.png",
               alt: ""
             })
           })
         })]
       })
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("button", {
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)("button", {
       onClick: onClickFetchCaps,
       children: "Caps"
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("br", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("button", {
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)("br", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)("button", {
       onClick: onClickFetchTops,
       children: "Tops"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)("br", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)("button", {
+      onClick: onClickFetchPants,
+      children: "Pants"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)("br", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)("button", {
+      onClick: onClickFetchShoes,
+      children: "Shoes"
     })]
   });
 }
 
 if (document.getElementById('main')) {
-  react_dom__WEBPACK_IMPORTED_MODULE_1__.render( /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(App, {}), document.getElementById('main'));
+  react_dom__WEBPACK_IMPORTED_MODULE_1__.render( /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)(App, {}), document.getElementById('main'));
 }
 
 /***/ }),
@@ -2308,6 +2381,80 @@ var useAllCaps = function useAllCaps() {
 
 /***/ }),
 
+/***/ "./resources/js/components/check/hooks/useAllPants.jsx":
+/*!*************************************************************!*\
+  !*** ./resources/js/components/check/hooks/useAllPants.jsx ***!
+  \*************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "useAllPants": () => (/* binding */ useAllPants)
+/* harmony export */ });
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { var _i = arr && (typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"]); if (_i == null) return; var _arr = []; var _n = true; var _d = false; var _s, _e; try { for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+
+
+var useAllPants = function useAllPants() {
+  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)([]),
+      _useState2 = _slicedToArray(_useState, 2),
+      userPants = _useState2[0],
+      setUserPants = _useState2[1];
+
+  var _useState3 = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(false),
+      _useState4 = _slicedToArray(_useState3, 2),
+      loadingPants = _useState4[0],
+      setLoading = _useState4[1];
+
+  var _useState5 = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(false),
+      _useState6 = _slicedToArray(_useState5, 2),
+      errorPants = _useState6[0],
+      setError = _useState6[1];
+
+  var getPants = function getPants() {
+    setLoading(true);
+    setError(false);
+    console.log("pantsだよ");
+    axios__WEBPACK_IMPORTED_MODULE_0___default().get("/api/pants").then(function (res) {
+      console.log(res);
+      var data = res.data.map(function (pants) {
+        return {
+          id: pants.id,
+          url: pants.url
+        };
+      });
+      setUserPants(data);
+    })["catch"](function () {
+      setError(true);
+    })["finally"](function () {
+      setLoading(false);
+    });
+  };
+
+  return {
+    getPants: getPants,
+    userPants: userPants,
+    loadingPants: loadingPants,
+    errorPants: errorPants
+  };
+};
+
+/***/ }),
+
 /***/ "./resources/js/components/check/hooks/useAllPosts.jsx":
 /*!*************************************************************!*\
   !*** ./resources/js/components/check/hooks/useAllPosts.jsx ***!
@@ -2378,6 +2525,80 @@ var useAllPosts = function useAllPosts() {
     userPosts: userPosts,
     loadingPosts: loadingPosts,
     errorPosts: errorPosts
+  };
+};
+
+/***/ }),
+
+/***/ "./resources/js/components/check/hooks/useAllShoes.jsx":
+/*!*************************************************************!*\
+  !*** ./resources/js/components/check/hooks/useAllShoes.jsx ***!
+  \*************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "useAllShoes": () => (/* binding */ useAllShoes)
+/* harmony export */ });
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { var _i = arr && (typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"]); if (_i == null) return; var _arr = []; var _n = true; var _d = false; var _s, _e; try { for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+
+
+var useAllShoes = function useAllShoes() {
+  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)([]),
+      _useState2 = _slicedToArray(_useState, 2),
+      userShoes = _useState2[0],
+      setUserShoes = _useState2[1];
+
+  var _useState3 = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(false),
+      _useState4 = _slicedToArray(_useState3, 2),
+      loadingShoes = _useState4[0],
+      setLoading = _useState4[1];
+
+  var _useState5 = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(false),
+      _useState6 = _slicedToArray(_useState5, 2),
+      errorShoes = _useState6[0],
+      setError = _useState6[1];
+
+  var getShoes = function getShoes() {
+    setLoading(true);
+    setError(false);
+    console.log("shoesだよ");
+    axios__WEBPACK_IMPORTED_MODULE_0___default().get("/api/shoes").then(function (res) {
+      console.log(res);
+      var data = res.data.map(function (shoes) {
+        return {
+          id: shoes.id,
+          url: shoes.url
+        };
+      });
+      setUserShoes(data);
+    })["catch"](function () {
+      setError(true);
+    })["finally"](function () {
+      setLoading(false);
+    });
+  };
+
+  return {
+    getShoes: getShoes,
+    userShoes: userShoes,
+    loadingShoes: loadingShoes,
+    errorShoes: errorShoes
   };
 };
 

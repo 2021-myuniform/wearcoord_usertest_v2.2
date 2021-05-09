@@ -59,9 +59,56 @@ Route::get( '/tops', function ( Request $request ) {
         ],
         [
             'id'  => 4,
-            'url' => '/img/rakutenlist/asics/male/508759/red/aozoraya-sp_10118127.png',
+            'url' => '/img/rakutenlist/fila/male/508759/red/la-foresta_10076503.png',
+        ],
+    ]);
+    return response()->json( $tops );
+} );
+
+Route::get( '/pants', function ( Request $request ) {
+
+    $pants = collect([
+        [
+            'id'  => 1,
+            'url' => '/img/rakutenlist/asics/male/508772/black/chitosesports_10030744.png',
+        ],
+        [
+            'id'  => 2,
+            'url' => '/img/rakutenlist/fila/male/508772/red/amuse37_10002360.png',
+        ],
+        [
+            'id'  => 3,
+            'url' => '/img/rakutenlist/asics/male/508772/white/aozoraya-sp_10142640.png',
+        ],
+        [
+            'id'  => 4,
+            'url' => '/img/rakutenlist/asics/male/508772/black/chitosesports-b_10016753.png',
         ],
     ]);
 
-    return response()->json( $tops );
+    return response()->json( $pants );
+} );
+
+Route::get( '/shoes', function ( Request $request ) {
+
+    $shoes = collect([
+        [
+            'id'  => 1,
+            'url' => '/img/rakutenlist/fila/male/208025/white/esports_11472884.png',
+        ],
+        [
+            'id'  => 2,
+            'url' => '/img/rakutenlist/asics/male/208025/black/chitosesports_10047743.png',
+        ],
+        [
+            'id'  => 3,
+            'url' => '/img/rakutenlist/adidas/male/208025/red/everracket_10038980.png',
+        ],
+        [
+            'id'  => 4,
+            'url' => '/img/rakutenlist/adidas/male/208025/red/sportsauthority_10328602.png',
+        ],
+    ]);
+
+    return response()->json( $shoes );
 } );

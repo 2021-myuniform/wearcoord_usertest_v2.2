@@ -10,13 +10,19 @@ import { useAllPosts } from './check/hooks/useAllPosts';
 import { SetBtn } from './check/components/SetBtn';
 import { useAllCaps } from './check/hooks/useAllCaps';
 import { useAllTops } from './check/hooks/useAllTops';
+import { useAllPants } from './check/hooks/useAllPants';
+import { useAllShoes } from './check/hooks/useAllShoes';
 
 function App() {
     const { getCaps, userCaps, loading, error } = useAllCaps();
     const { getTops, userTops, loadingTops, errorTops } = useAllTops();
+    const { getPants, userPants, loadingPants, errorPants } = useAllPants();
+    const { getShoes, userShoes, loadingShoes, errorShoes } = useAllShoes();
 
     const onClickFetchCaps = () => getCaps();
     const onClickFetchTops = () => getTops();
+    const onClickFetchPants = () => getPants();
+    const onClickFetchShoes = () => getShoes();
 
     return (
         <>
@@ -85,54 +91,80 @@ function App() {
 
                     <div style={{ display: "flex", overflowX: "scroll" }}>
                         {userTops.length ?
-                        (error ? (
-                            <p style={{ color: "red" }}>データの取得に失敗しました</p>
-                        ) : loadingTops ? (
-                            <p>Loading...</p>
-                        ) : (
-                            <>
-                                <Swiper id="controller2"
-                                    slidesPerView={3}
-                                    centeredSlides={true}
-                                >
-                                    {userTops.map((wear) => (
-                                        <SwiperSlide className="wearLi" key={wear.id}  >
-                                            <img className="wearImg" src={wear.url} alt="" />
-                                        </SwiperSlide>
-                                    ))}
-                                </Swiper>
-                            </>
-                        )) : (
-                            <div>
-                                <img style={{ width: "100%", height: "130px", objectFit: "contain", position: "absolute", top: "66px", objectPosition: "36px" }} src='img/rakutenlist/asics/male/508759/blue/chitosesports_10043147navy.png' alt="" />
-                            </div>
-                        )}
+                            (error ? (
+                                <p style={{ color: "red" }}>データの取得に失敗しました</p>
+                            ) : loadingTops ? (
+                                <p>Loading...</p>
+                            ) : (
+                                <>
+                                    <Swiper id="controller2"
+                                        slidesPerView={3}
+                                        centeredSlides={true}
+                                    >
+                                        {userTops.map((wear) => (
+                                            <SwiperSlide className="wearLi" key={wear.id}  >
+                                                <img className="wearImg" src={wear.url} alt="" />
+                                            </SwiperSlide>
+                                        ))}
+                                    </Swiper>
+                                </>
+                            )) : (
+                                <div>
+                                    <img style={{ width: "100%", height: "130px", objectFit: "contain", position: "absolute", top: "66px", objectPosition: "36px", zIndex: "100" }} src='img/rakutenlist/asics/male/508759/blue/chitosesports_10043147navy.png' alt="" />
+                                </div>
+                            )}
                     </div>
 
                     <div style={{ display: "flex", overflowX: "scroll" }}>
-                        {userTops.length ?
-                        (error ? (
-                            <p style={{ color: "red" }}>データの取得に失敗しました</p>
-                        ) : loadingTops ? (
-                            <p>Loading...</p>
-                        ) : (
-                            <>
-                                <Swiper id="controller3"
-                                    slidesPerView={3}
-                                    centeredSlides={true}
-                                >
-                                    {userTops.map((wear) => (
-                                        <SwiperSlide className="wearLi" key={wear.id}  >
-                                            <img className="wearImg" src={wear.url} alt="" />
-                                        </SwiperSlide>
-                                    ))}
-                                </Swiper>
-                            </>
-                        )) : (
-                            <div>
-                                <img style={{ width: "100%", height: "130px", objectFit: "contain", position: "absolute", top: "66px", objectPosition: "36px" }} src='img/rakutenlist/asics/male/508759/blue/chitosesports_10043147navy.png' alt="" />
-                            </div>
-                        )}
+                        {userPants.length ?
+                            (error ? (
+                                <p style={{ color: "red" }}>データの取得に失敗しました</p>
+                            ) : loadingPants ? (
+                                <p>Loading...</p>
+                            ) : (
+                                <>
+                                    <Swiper id="controller3"
+                                        slidesPerView={3}
+                                        centeredSlides={true}
+                                    >
+                                        {userPants.map((wear) => (
+                                            <SwiperSlide className="wearLi" key={wear.id}  >
+                                                <img className="wearImg" src={wear.url} alt="" />
+                                            </SwiperSlide>
+                                        ))}
+                                    </Swiper>
+                                </>
+                            )) : (
+                                <div>
+                                    <img style={{ width: "100%", height: "180px", objectFit: "contain", position: "absolute", top: "190px", objectPosition: "10px" }} src='/img/rakutenlist/asics/male/508772/white/sportsman_11351615.png'  alt="" />
+                                </div>
+                            )}
+                    </div>
+
+                    <div style={{ display: "flex", overflowX: "scroll" }}>
+                        {userShoes.length ?
+                            (error ? (
+                                <p style={{ color: "red" }}>データの取得に失敗しました</p>
+                            ) : loadingShoes ? (
+                                <p>Loading...</p>
+                            ) : (
+                                <>
+                                    <Swiper id="controller4"
+                                        slidesPerView={3}
+                                        centeredSlides={true}
+                                    >
+                                        {userShoes.map((wear) => (
+                                            <SwiperSlide className="wearLi" key={wear.id}  >
+                                                <img className="wearImg" src={wear.url} alt="" />
+                                            </SwiperSlide>
+                                        ))}
+                                    </Swiper>
+                                </>
+                            )) : (
+                                <div>
+                                    <img style={{ width: "100%", height: "100px", objectFit: "contain", position: "absolute", top: "320px", objectPosition: "50px" }} src='/img/rakutenlist/adidas/male/208025/yellow/mathy-mathy_10198030.png'  alt="" />
+                                </div>
+                            )}
                     </div>
 
                 </div>
@@ -140,6 +172,10 @@ function App() {
             <button onClick={onClickFetchCaps}>Caps</button>
             <br />
             <button onClick={onClickFetchTops}>Tops</button>
+            <br />
+            <button onClick={onClickFetchPants}>Pants</button>
+            <br />
+            <button onClick={onClickFetchShoes}>Shoes</button>
             {/* <SetBtn onClick={onClickFetchCaps, onClickFetchTops} /> */}
         </>
     );
