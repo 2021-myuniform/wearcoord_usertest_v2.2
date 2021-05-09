@@ -20,26 +20,48 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::get( '/caps', function ( Request $request ) {
 
-    $pitchers = collect([
+    $caps = collect([
         [
-            'key'  => 'saito',
-            'name' => '斎藤',
-            'era'  => 1.62,
-            'win'  => 20,
+            'id'  => 1,
+            'url' => '/img/rakutenlist/adidas/male/506269/black/aozoraya-sp_10136470.png',
         ],
         [
-            'key'  => 'makihara',
-            'name' => '槇原',
-            'era'  => 2.29,
-            'win'  => 12,
+            'id'  => 2,
+            'url' => '/img/rakutenlist/adidas/male/506269/blue/la-foresta_10075792.png',
         ],
         [
-            'key'  => 'kuwata',
-            'name' => '桑田',
-            'era'  => 2.60,
-            'win'  => 17,
+            'id'  => 3,
+            'url' => '/img/rakutenlist/adidas/male/506269/black/aozoraya-sp_10136470.png',
+        ],
+        [
+            'id'  => 4,
+            'url' => '/img/rakutenlist/adidas/male/506269/blue/la-foresta_10075792.png',
         ],
     ]);
 
-    return response()->json( $pitchers );
+    return response()->json( $caps );
+} );
+
+Route::get( '/tops', function ( Request $request ) {
+
+    $tops = collect([
+        [
+            'id'  => 1,
+            'url' => '/img/rakutenlist/asics/male/508759/black/chitosesports_10038396.png',
+        ],
+        [
+            'id'  => 2,
+            'url' => '/img/rakutenlist/asics/male/508759/blue/2041a102_11blue.png',
+        ],
+        [
+            'id'  => 3,
+            'url' => '/img/rakutenlist/asics/male/508759/green/chitosesports-b_10013876.png',
+        ],
+        [
+            'id'  => 4,
+            'url' => '/img/rakutenlist/asics/male/508759/red/aozoraya-sp_10118127.png',
+        ],
+    ]);
+
+    return response()->json( $tops );
 } );

@@ -14,3 +14,34 @@
   min-width: 200px;
   margin: auto;
 }
+
+#controller {
+  width: 100%;
+  left: 0px;
+  position: absolute;
+  top: 0;
+}
+
+#controller .wearLi {
+  text-align: center;
+}
+
+#controller .wearImg {
+  width: 54px;
+}
+
+#controller2 {
+  width: 100%;
+  left: 0px;
+  position: absolute;
+  top: 70px;
+  z-index: 100;
+}
+
+#controller2 .wearLi {
+  text-align: center;
+}
+
+#controller2 .wearImg {
+  width: 130px;
+}
